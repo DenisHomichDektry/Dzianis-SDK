@@ -1,6 +1,5 @@
 /.idea
 /package/node_modules
 /package/dist
-.env
 /examples/*/node_modules
 /examples/*/.env

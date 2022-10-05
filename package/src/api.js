@@ -17,50 +17,50 @@ class TheOneAPI {
   //   params: object, // see documentation of api
   // }
 
-  async getBooks(config = {}) {
-    const url = config.allChapters
-      ? `/book/${config.id}/chapter`
-      : `/book/${config.id || ""}`;
+  async getBooks(options = {}) {
+    const url = options.allChapters
+      ? `/book/${options.id}/chapter`
+      : `/book/${options.id || ""}`;
 
     try {
-      const { data } = await this.api.get(url, { params: config.params });
+      const { data } = await this.api.get(url, { params: options.params });
       return data;
     } catch (error) {
       return error;
     }
   }
 
-  async getCharacters(config = {}) {
-    const url = config.allQuotes
-      ? `/character/${config.id}/quote`
-      : `/character/${config.id || ""}`;
+  async getCharacters(options = {}) {
+    const url = options.allQuotes
+      ? `/character/${options.id}/quote`
+      : `/character/${options.id || ""}`;
 
     try {
-      const { data } = await this.api.get(url, { params: config.params });
+      const { data } = await this.api.get(url, { params: options.params });
       return data;
     } catch (error) {
       return error;
     }
   }
 
-  async getQuotes(config = {}) {
-    const url = `/quote/${config.id || ""}`;
+  async getQuotes(options = {}) {
+    const url = `/quote/${options.id || ""}`;
 
     try {
-      const { data } = await this.api.get(url, { params: config.params });
+      const { data } = await this.api.get(url, { params: options.params });
       return data;
     } catch (error) {
       return error;
     }
   }
 
-  async getMovies(config = {}) {
-    const url = config.allQuotes
-      ? `/movie/${config.id}/quote`
-      : `/movie/${config.id || ""}`;
+  async getMovies(options = {}) {
+    const url = options.allQuotes
+      ? `/movie/${options.id}/quote`
+      : `/movie/${options.id || ""}`;
 
     try {
-      const { data } = await this.api.get(url, { params: config.params });
+      const { data } = await this.api.get(url, { params: options.params });
       return data;
     } catch (error) {
       return error;
