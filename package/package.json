@@ -1,12 +1,13 @@
 {
   "name": "denis-dektry-sdk",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "description": "",
   "module": "dist/denis-dektry-sdk.esm.min.js",
   "browser": "dist/denis-dektry-sdk.umd.min.js",
   "main": "dist/denis-dektry-sdk.cjs.min.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
   },
   "author": "Denis",
   "license": "ISC",
