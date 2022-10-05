@@ -1,12 +1,18 @@
-import test from "denis-dektry-sdk";
-import { useState } from 'react'
+import {config, theOneAPI} from "denis-dektry-sdk";
+import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
-    test();
+    useEffect(() => {
+        theOneAPI().getBooks().then((res) => {
+            console.log(res.data);
+        });
+    },[])
+
+
 
   return (
     <div className="App">

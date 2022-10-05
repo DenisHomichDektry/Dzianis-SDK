@@ -1,3 +1,10 @@
-import test from 'denis-dektry-sdk';
+import {config, theOneAPI} from "denis-dektry-sdk";
+import dotenv from "dotenv";
 
-test();
+dotenv.config();
+
+config(process.env.API_ACCESS_TOKEN);
+
+theOneAPI()
+  .getBooks()
+  .then((res) => console.log(res.data));
