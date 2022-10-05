@@ -1,3 +1,3 @@
-const test = () => console.log('Hello World');
+import { theOneAPI } from "src/api.js";
 
-export default test;
+export default theOneAPI;

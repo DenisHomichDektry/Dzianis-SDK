@@ -1,6 +1,6 @@
 {
   "name": "denis-dektry-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -8,5 +8,12 @@
   },
   "author": "Denis",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.0.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
 }
